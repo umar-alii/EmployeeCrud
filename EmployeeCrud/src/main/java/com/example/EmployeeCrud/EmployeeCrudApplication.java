@@ -10,4 +10,10 @@ public class EmployeeCrudApplication {
 		SpringApplication.run(EmployeeCrudApplication.class, args);
 	}
 
+
 }
+/*
+@configuration
+@enableautoconfiguration
+@componentscan
+ */

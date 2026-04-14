@@ -2,13 +2,14 @@ package com.example.EmployeeCrud.service;
 
 import com.example.EmployeeCrud.model.Employee;
 import com.example.EmployeeCrud.repository.EmployeeRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class EmployeeService {
-
 
     private final EmployeeRepository repository;
 
@@ -53,5 +54,9 @@ public class EmployeeService {
 
     public List<Employee> getByDepartment(String department) {
         return repository.findByDepartment(department);
+    }
+
+    public List<Employee> getBySalary(double value){
+        return repository.findBySalaryGreaterThan(value);
     }
 }

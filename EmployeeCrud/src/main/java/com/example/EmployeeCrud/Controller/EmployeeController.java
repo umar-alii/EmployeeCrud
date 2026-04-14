@@ -47,4 +47,9 @@ public class EmployeeController {
     public List<Employee> byDept(@PathVariable String dept) {
         return service.getByDepartment(dept);
     }
+
+    @GetMapping("/salary/{value}")
+    public List<Employee> bySalary(@PathVariable double value){
+        return service.getBySalary(value);
+    }
 }
